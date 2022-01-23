@@ -99,8 +99,8 @@ def convert_dataset(shard):
 
   for i, (images, flow,
           assignment) in enumerate(zip(image_list, flow_list, train_val)):
-    image1_data = scipy.ndimage.imread(images[0])
-    image2_data = scipy.ndimage.imread(images[1])
+    image1_data = scipy.misc.imread(images[0])
+    image2_data = scipy.misc.imread(images[1])
     flow_data = conversion_utils.read_flow(flow)
 
     height = image1_data.shape[0]
